@@ -1,5 +1,5 @@
 import classes from "./CartButton.module.css";
-import { toggleVisibility } from "../../store";
+import { toggleVisibility } from "../../store/cart-slice";
 import { useSelector, useDispatch } from "react-redux";
 
 const CartButton = (props) => {

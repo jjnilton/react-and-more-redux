@@ -1,6 +1,6 @@
 import classes from './CartItem.module.css';
-import { changeQuantity } from "../../store"
-import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, removeFromCart } from "../../store/cart-slice"
+import { useDispatch } from 'react-redux';
 
 const CartItem = (props) => {
   const { id, title, quantity, total, price } = props.item;
@@ -9,9 +9,9 @@ const CartItem = (props) => {
 
   const handleChange = (event) => {
     if (event.target.textContent === "+") {
-      dispatch(changeQuantity({id: id, type: "add", value: 1}))
+      dispatch(addToCart({id: id}))
     } else if (event.target.textContent === "-") {
-      dispatch(changeQuantity({id: id, type: "sub", value: 1}))
+      dispatch(removeFromCart({id: id}))
     }
   }
 
