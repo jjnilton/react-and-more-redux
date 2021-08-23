@@ -25,7 +25,7 @@ const PRODUCTS_DATA = [
 const Products = (props) => {
 
   const products = PRODUCTS_DATA.map(product => {
-    return <ProductItem id={product.id} title={product.title} price={product.price} description={product.description}></ProductItem>
+    return <ProductItem key={product.id} id={product.id} title={product.title} price={product.price} description={product.description}></ProductItem>
   })
 
   return (
