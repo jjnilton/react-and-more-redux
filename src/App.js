@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import Notification from "./components/UI/Notification";
 import { useRef } from "react";
-import { fetchCartData, sendCartData } from "./store/cart-slice";
+import { fetchCartData, sendCartData } from "./store/cart-actions";
 
 function App() {
   const dispatch = useDispatch();

@@ -20,7 +20,7 @@ const Notification = (props) => {
   useEffect(() => {
     setTimeout(() => {
       dispatch(resetNotification());
-    }, 2000)
+    }, 1000)
   }, [props, dispatch])
 
 
